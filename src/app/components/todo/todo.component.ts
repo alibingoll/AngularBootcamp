@@ -13,12 +13,6 @@ import { Component, OnInit } from '@angular/core';
 export class TodoComponent implements OnInit {
 
  
-  todo1:Todos={
-    userId : 1,
-    id : 2,
-    title : "Alii",
-    completed : true
-  };
   todos:Todos[]=[];
   dataLoaded = false;
  
