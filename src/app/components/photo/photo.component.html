@@ -1,0 +1,20 @@
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Album Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Url</th>
+        <th scope="col">Thumbnail Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let photo of photos">
+        <th scope="row">{{photo.id}}</th>
+        <td>{{photo.albumId}}</td>
+        <td>{{photo.title}}</td>
+        <td>{{photo.url}}</td>
+        <td>{{photo.thumbnailUrl}}</td>
+      </tr>
+    </tbody>
+  </table>
