@@ -15,13 +15,16 @@ export class CategoryComponent implements OnInit {
   constructor(private categorytService:CategorytService) { }
 
   ngOnInit(): void {
-    this.getCategories();
+    // this.getCategories();
   }
 
-  getCategories(){
-    this.categorytService.getCategories().subscribe(response=>{
-      this.categories = response.data;
-    })
+  // getCategories(){
+  //   this.categorytService.getCategories().subscribe(response=>{
+  //     this.categories = response.data;
+  //   })
+  // }
+  getTodosUserId(userId:number){
+    console.log(userId)
   }
   setCurrentCategory(category:Category){
     this.currentCategory=category;
@@ -29,6 +32,14 @@ export class CategoryComponent implements OnInit {
 
   getCurrentCategoryClass(category:Category){
     if(category==this.currentCategory){
+      return "list-group-item active"
+    }else{
+      return "list-group-item"
+    }
+  }
+  
+  getAllCategoryClass(){
+    if(!this.currentCategory){
       return "list-group-item active"
     }else{
       return "list-group-item"
